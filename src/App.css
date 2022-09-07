@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --darkblue:  rgb(7, 1, 41);
+  --primary-table-color: rgb(0, 0, 0);
+  --font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace, Arial, Helvetica, sans-serif, 'Times New Roman', Times, serif;
+  --app-backgr-color: #272b33;
+  --background-gradient-color: linear-gradient(90deg, rgb(89, 53, 112) 0%, rgb(49, 49, 49) 22%, rgb(49, 48, 146) 50%, rgb(219, 127, 41) 80%, rgb(102, 161, 46) 90%);
+}
+
+.searchBar {
+  width: 20rem;
+  height: 1.7rem;
+  margin: 10px 30px 10px;
+  font-family: var(--font-family);
+  background-color: var(--darkblue);
+  color: var(--white);
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid var(--darkblue);
+}
+
+.App-logo {
+  width: 8rem;
+  pointer-events: none;
+}
+
+.Title {
+  width: auto;
+  font-size: 60px;
+  font-weight: 800;
+  background: var(--darkblue);
+  background-color: var(--darkblue);
+  background: conic-gradient(
+    #ce252b 15%, 
+    #dd4f27 15%, 
+    #d14d28 30%, 
+    #F18F43 30%, 
+    #F18F43 50%, 
+    #8B9862 50%, 
+    #819150 65%, 
+    #2953af 65%, 
+    #2c54ac 85%, 
+    #a131a5 85%);
+  
+  background-size: 50%;
+  background-repeat: repeat;
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: Title-animation-rev 1.0s ease forwards;
+  cursor: auto;
+}
+
+.Title:hover {
+  animation: Title-animation 1.0s ease forwards;
+}
+
+@keyframes Title-animation {
+  0% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+  20% {
+    background-size: 50%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 300%;
+    background-position: -11em 1em;
+  }
+}
+
+@keyframes Title-animation-rev {
+  0% {
+    background-size: 300%;
+    background-position: -11em 1em;
+  }
+  20% {
+    background-size: 50%;
+    background-position: 0 1em;
+  }
+  100% {
+    background-size: 50%;
+    background-position: 0 0;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 5s alternate-reverse;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.App-header {
+  background-color:var(--app-backgr-color);
+  background: var(--background-gradient-color);
+  min-height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.App-main {
+  background-color:var(--app-backgr-color);
+  background: var(--background-gradient-color);
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: auto;
+  color: white;
+}
+
+.Table-user {
+  background-color: var(--app-backgr-color);
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.Primary {
+  color: var(--primary-table-color);
+  background: -webkit-linear-gradient(rgb(219, 219, 219) 40%, rgb(114, 114, 114) 85%, #272b33 100%);
+  -webkit-text-fill-color: solid;
+}
